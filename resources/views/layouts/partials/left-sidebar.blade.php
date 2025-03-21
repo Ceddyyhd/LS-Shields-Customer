@@ -66,19 +66,20 @@
             </a>
         </li>
 
-        <li class="menu-title">Bug Report & Changelog</li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <span class="nav-icon"><iconify-icon icon="mdi:bug"></iconify-icon></span>
-                    Bug Reports
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <span class="nav-icon"><iconify-icon icon="mdi:history"></iconify-icon></span>
-                    <span class="nav-text">Changelog</span>
-                </a>
-            </li>
+        <li class="menu-title">Kunden</li>
+        <li class="nav-item">
+            <a class="nav-link menu-arrow" href="#sidebarCustomer" data-bs-toggle="collapse" role="button">
+                <span class="nav-icon"><iconify-icon icon="iconamoon:users-duotone"></iconify-icon></span>
+                <span class="nav-text">Kunden</span>
+            </a>
+            <div class="collapse" id="sidebarCustomer">
+                <ul class="nav sub-navbar-nav">
+                    <li class="sub-nav-item">
+                        <a class="sub-nav-link" href="#">Übersicht</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
 
         <li class="menu-title">Einstellungen</li>
 
