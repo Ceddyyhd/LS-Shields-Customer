@@ -71,9 +71,6 @@
                 <a class="nav-link" href="#">
                     <span class="nav-icon"><iconify-icon icon="mdi:bug"></iconify-icon></span>
                     Bug Reports
-                    @if($openBugReportsCount > 0)
-                    <span class="badge bg-primary rounded-pill ms-2">{{ $openBugReportsCount }}</span>
-                @endif
                 </a>
             </li>
             <li class="nav-item">
