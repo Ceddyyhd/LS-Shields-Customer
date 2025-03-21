@@ -80,3 +80,33 @@
     </div>
 </header>
 
+@push('scripts')
+<script>
+$(document).ready(function() {
+    $('#attendanceBtn').on('click', function() {
+        $.ajax({
+            url: '{{ route("attendance.toggle") }}',
+            type: 'POST',
+            data: {
+                _token: '{{ csrf_token() }}'
+            },
+            success: function(response) {
+                const btn = $('#attendanceBtn');
+                const status = $('#attendanceStatus');
+                
+                if (response.status === 'present') {
+                    btn.removeClass('btn-danger').addClass('btn-success');
+                    status.text('Anwesend');
+                } else {
+                    btn.removeClass('btn-success').addClass('btn-danger');
+                    status.text('Abwesend');
+                }
+            },
+            error: function(xhr) {
+                console.error('Attendance toggle failed:', xhr);
+            }
+        });
+    });
+});
+</script>
+@endpush
