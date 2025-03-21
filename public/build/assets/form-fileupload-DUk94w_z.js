@@ -1,0 +1,1 @@
+import{$ as r}from"./dropzone-DnLKvtV7.js";var e=document.querySelector("#dropzone-preview-list");e.id="";if(e){var o=e.parentNode.innerHTML;e.parentNode.removeChild(e),new r(".dropzone",{url:"https://httpbin.org/post",method:"post",previewTemplate:o,previewsContainer:"#dropzone-preview"})}

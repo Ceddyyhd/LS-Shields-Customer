@@ -1,0 +1,1 @@
+import{b as r}from"./bootstrap.min-DXbTHNfx.js";import{W as o}from"./wizard-CzUj8hgA.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-WhmJkuoZ.js";window.bootstrap=r;new o("#horizontalwizard");new o("#verticalwizard");
