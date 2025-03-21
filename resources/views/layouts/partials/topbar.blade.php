@@ -85,7 +85,7 @@
 $(document).ready(function() {
     $('#attendanceBtn').on('click', function() {
         $.ajax({
-            url: '{{ route("attendance.toggle") }}',
+            url: '#',
             type: 'POST',
             data: {
                 _token: '{{ csrf_token() }}'
