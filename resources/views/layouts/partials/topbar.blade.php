@@ -63,24 +63,6 @@
                             ><span class="align-middle">Einstellungen</span>
                         </a>
 
-                        <a class="dropdown-item" href="{{ route('second', ['pages', 'pricing'])}}">
-                            <i
-                                class="bx bx-wallet text-muted fs-18 align-middle me-1"
-                            ></i
-                            ><span class="align-middle">Pricing</span>
-                        </a>
-                        <a class="dropdown-item" href="{{ route('second', ['pages', 'faqs'])}}">
-                            <i
-                                class="bx bx-help-circle text-muted fs-18 align-middle me-1"
-                            ></i
-                            ><span class="align-middle">Help</span>
-                        </a>
-                        <a class="dropdown-item" href="{{ route('second', ['auth', 'lock-screen'])}}">
-                            <i
-                                class="bx bx-lock text-muted fs-18 align-middle me-1"
-                            ></i
-                            ><span class="align-middle">Lock screen</span>
-                        </a>
 
                         <div class="dropdown-divider my-1"></div>
 
