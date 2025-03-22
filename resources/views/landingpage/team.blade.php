@@ -22,8 +22,9 @@
                             <div class="detail-box">
                                 <h5>{{ $levelEmployees[0]->name }}</h5>
                                 <h6>{{ $levelEmployees[0]->role_name }}</h6>
-                                <hr
-                                <p>Test</p>
+                                @if($levelEmployees[0]->description)
+                                    <p class="mt-2">{{ $levelEmployees[0]->description }}</p>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -36,6 +37,9 @@
                             <div class="detail-box">
                                 <h5>{{ $levelEmployees[0]->name }}</h5>
                                 <h6>{{ $levelEmployees[0]->role_name }}</h6>
+                                @if($levelEmployees[0]->description)
+                                    <p class="mt-2">{{ $levelEmployees[0]->description }}</p>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -48,6 +52,9 @@
                             <div class="detail-box">
                                 <h5>{{ $levelEmployees[1]->name }}</h5>
                                 <h6>{{ $levelEmployees[1]->role_name }}</h6>
+                                @if($levelEmployees[0]->description)
+                                    <p class="mt-2">{{ $levelEmployees[1]->description }}</p>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -61,6 +68,9 @@
                                 <div class="detail-box">
                                     <h5>{{ $employee->name }}</h5>
                                     <h6>{{ $employee->role_name }}</h6>
+                                    @if($levelEmployees->description)
+                                    <p class="mt-2">{{ $levelEmployees[1]->description }}</p>
+                                @endif
                                 </div>
                             </div>
                         </div>
@@ -122,5 +132,10 @@
     .detail-box h5, .detail-box h6 {
         margin: 5px;
     }
+    .detail-box p {
+    font-size: 0.9rem;
+    margin: 8px 0 0;
+    color: #e0e0e0;
+}
 </style>
 @endsection

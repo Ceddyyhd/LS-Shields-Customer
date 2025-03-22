@@ -30,7 +30,8 @@ class TeamController extends Controller
             'users.id', 
             'users.name', 
             'users.profile_image', 
-            'users.role_id', 
+            'users.role_id',
+            'users.description', 
             'roles.name as role_name', 
             'roles.level',
             'roles.value'
