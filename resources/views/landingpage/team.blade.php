@@ -22,7 +22,7 @@
                             <div class="detail-box">
                                 <h5>{{ $levelEmployees[0]->name }}</h5>
                                 <h6>{{ $levelEmployees[0]->role_name }}</h6>
-                                <h6>Test</h6>
+                                <p>Test</p>
                             </div>
                         </div>
                     </div>
