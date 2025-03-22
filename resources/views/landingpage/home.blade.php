@@ -434,7 +434,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
                 <div class="col-md-4 col-sm-6 mx-auto">
                     <div class="team-member-box">
                         <div class="team-img-box">
-                            <img src="https://intern.ls-shields.eu/storage/{{ $employee->profile_image }}" alt="" class="img-fluid">
+                            <img src="https://intern.ls-shields.eu/profile-images/{{ $employee->profile_image }}" alt="" class="img-fluid">
                         </div>
                         <div class="team-detail-box">
                             <h5>{{ $employee->name }}</h5>
