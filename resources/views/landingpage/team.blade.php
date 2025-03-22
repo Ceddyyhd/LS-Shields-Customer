@@ -17,7 +17,7 @@
                     <div class="col-md-4 text-center">
                         <div class="box">
                             <div class="img-box">
-                            <img src="https://intern.ls-shields.eu/profile-images/{{ $levelEmployees[0]->profile_image }}" alt="" class="img-fluid small-img">
+                                <img src="https://intern.ls-shields.eu/profile-images/{{ $levelEmployees[0]->profile_image }}" alt="" class="img-fluid small-img">
                             </div>
                             <div class="detail-box">
                                 <h5>{{ $levelEmployees[0]->name }}</h5>
@@ -32,7 +32,7 @@
                     <div class="col-md-4 text-center">
                         <div class="box">
                             <div class="img-box">
-                            <img src="https://intern.ls-shields.eu/profile-images/{{ $levelEmployees[0]->profile_image }}" alt="" class="img-fluid medium-img">
+                                <img src="https://intern.ls-shields.eu/profile-images/{{ $levelEmployees[0]->profile_image }}" alt="" class="img-fluid medium-img">
                             </div>
                             <div class="detail-box">
                                 <h5>{{ $levelEmployees[0]->name }}</h5>
@@ -47,12 +47,12 @@
                     <div class="col-md-4 text-center">
                         <div class="box">
                             <div class="img-box">
-                            <img src="https://intern.ls-shields.eu/profile-images/{{ $levelEmployees[1]->profile_image }}" alt="" class="img-fluid medium-img">
+                                <img src="https://intern.ls-shields.eu/profile-images/{{ $levelEmployees[1]->profile_image }}" alt="" class="img-fluid medium-img">
                             </div>
                             <div class="detail-box">
                                 <h5>{{ $levelEmployees[1]->name }}</h5>
                                 <h6>{{ $levelEmployees[1]->role_name }}</h6>
-                                @if($levelEmployees[0]->description)
+                                @if($levelEmployees[1]->description)
                                     <p class="mt-2">{{ $levelEmployees[1]->description }}</p>
                                 @endif
                             </div>
@@ -63,14 +63,14 @@
                         <div class="col-md-4 text-center">
                             <div class="box">
                                 <div class="img-box">
-                                <img src="https://intern.ls-shields.eu/profile-images/{{ $employee->profile_image }}" alt="" class="img-fluid">
+                                    <img src="https://intern.ls-shields.eu/profile-images/{{ $employee->profile_image }}" alt="" class="img-fluid">
                                 </div>
                                 <div class="detail-box">
                                     <h5>{{ $employee->name }}</h5>
                                     <h6>{{ $employee->role_name }}</h6>
-                                    @if($levelEmployees->description)
-                                    <p class="mt-2">{{ $levelEmployees[1]->description }}</p>
-                                @endif
+                                    @if($employee->description)
+                                        <p class="mt-2">{{ $employee->description }}</p>
+                                    @endif
                                 </div>
                             </div>
                         </div>
