@@ -22,6 +22,7 @@
                             <div class="detail-box">
                                 <h5>{{ $levelEmployees[0]->name }}</h5>
                                 <h6>{{ $levelEmployees[0]->role_name }}</h6>
+                                <hr
                                 <p>Test</p>
                             </div>
                         </div>
