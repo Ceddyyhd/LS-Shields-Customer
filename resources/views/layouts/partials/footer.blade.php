@@ -11,7 +11,7 @@
                     class="fs-18 align-middle text-danger"
                 ></iconify-icon>
                 <a href="" class="fw-bold footer-text" target="_blank"
-                >Cedric</a
+                >Techzaa</a
                 >
             </div>
         </div>

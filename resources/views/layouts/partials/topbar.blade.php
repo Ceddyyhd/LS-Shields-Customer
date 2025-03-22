@@ -63,6 +63,24 @@
                             ><span class="align-middle">Einstellungen</span>
                         </a>
 
+                        <a class="dropdown-item" href="{{ route('second', ['pages', 'pricing'])}}">
+                            <i
+                                class="bx bx-wallet text-muted fs-18 align-middle me-1"
+                            ></i
+                            ><span class="align-middle">Pricing</span>
+                        </a>
+                        <a class="dropdown-item" href="{{ route('second', ['pages', 'faqs'])}}">
+                            <i
+                                class="bx bx-help-circle text-muted fs-18 align-middle me-1"
+                            ></i
+                            ><span class="align-middle">Help</span>
+                        </a>
+                        <a class="dropdown-item" href="{{ route('second', ['auth', 'lock-screen'])}}">
+                            <i
+                                class="bx bx-lock text-muted fs-18 align-middle me-1"
+                            ></i
+                            ><span class="align-middle">Lock screen</span>
+                        </a>
 
                         <div class="dropdown-divider my-1"></div>
 
@@ -80,33 +98,3 @@
     </div>
 </header>
 
-@push('scripts')
-<script>
-$(document).ready(function() {
-    $('#attendanceBtn').on('click', function() {
-        $.ajax({
-            url: '#',
-            type: 'POST',
-            data: {
-                _token: '{{ csrf_token() }}'
-            },
-            success: function(response) {
-                const btn = $('#attendanceBtn');
-                const status = $('#attendanceStatus');
-                
-                if (response.status === 'present') {
-                    btn.removeClass('btn-danger').addClass('btn-success');
-                    status.text('Anwesend');
-                } else {
-                    btn.removeClass('btn-success').addClass('btn-danger');
-                    status.text('Abwesend');
-                }
-            },
-            error: function(xhr) {
-                console.error('Attendance toggle failed:', xhr);
-            }
-        });
-    });
-});
-</script>
-@endpush

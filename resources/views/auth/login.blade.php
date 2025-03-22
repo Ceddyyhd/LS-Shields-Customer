@@ -89,7 +89,6 @@
                                                 type="email"
                                                 id="example-email"
                                                 name="email"
-                                                value="test@example.com"
                                                 class="form-control"
                                                 placeholder="Enter your email"
                                             />
@@ -110,7 +109,6 @@
                                                 type="password"
                                                 id="example-password"
                                                 name="password"
-                                                value="password"
                                                 class="form-control"
                                                 placeholder="Enter your password"
                                             />
@@ -141,7 +139,7 @@
                                     </form>
 
                                     <div class="text-center">
-                                        <a href="http://ls-shields.test/" class="btn btn-secondary btn-sm" style="width: auto; min-width: 120px;">
+                                        <a href="http://intern.ls-shields.eu/" class="btn btn-secondary btn-sm" style="width: auto; min-width: 120px;">
                                             Mitarbeiter Bereich
                                         </a>
                                     </div>
