@@ -127,15 +127,36 @@
         padding: 10px;
         border-radius: 5px;
         text-align: center;
+        margin-top: 15px; /* Add space between image and details */
+        max-height: 200px; /* Limit height */
+        overflow-y: auto; /* Add scroll if needed */
     }
 
     .detail-box h5, .detail-box h6 {
         margin: 5px;
     }
     .detail-box p {
-    font-size: 0.9rem;
-    margin: 8px 0 0;
-    color: #e0e0e0;
-}
+        font-size: 0.9rem;
+        margin: 8px 0 0;
+        color: #e0e0e0;
+        max-height: 100px; /* Limit description height */
+        overflow-y: auto; /* Add scroll for long descriptions */
+        padding: 5px;
+    }
+
+    /* Custom scrollbar styling */
+    .detail-box p::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .detail-box p::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+    }
+
+    .detail-box p::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+    }
 </style>
 @endsection
