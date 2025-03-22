@@ -127,10 +127,11 @@
         padding: 10px;
         border-radius: 5px;
         text-align: center;
-        margin-top: 15px; /* Add space between image and details */
-        max-height: 200px; /* Limit height */
-        overflow-y: auto; /* Add scroll if needed */
+        margin-top: 15px;
+        transition: all 0.3s ease;
     }
+
+
 
     .detail-box h5, .detail-box h6 {
         margin: 5px;
@@ -139,9 +140,24 @@
         font-size: 0.9rem;
         margin: 8px 0 0;
         color: #e0e0e0;
-        max-height: 100px; /* Limit description height */
-        overflow-y: auto; /* Add scroll for long descriptions */
         padding: 5px;
+        height: 25px; /* Height for approximately one line */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        transition: all 0.3s ease;
+    }
+
+    .detail-box:hover {
+        max-height: none;
+        z-index: 1000;
+    }
+
+    .detail-box:hover p {
+        height: auto;
+        max-height: 200px;
+        white-space: normal;
+        overflow-y: auto;
     }
 
     /* Custom scrollbar styling */
