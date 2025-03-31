@@ -159,7 +159,7 @@
         <p class="text-white mb-0 text-center">
             Don't have an account?
             <a
-                href="{{ route('second', [ 'auth' , 'register']) }}"
+                href="{{ route('register') }}"
                 class="text-white fw-bold ms-1"
             >Sign Up</a>
         </p>
