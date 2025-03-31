@@ -95,7 +95,7 @@
                                         </div>
                                         <div class="mb-3">
                                             <a
-                                                href="{{ route('second', [ 'auth' , 'reset-password']) }}"
+                                                href="{{ route('password.request') }}"
                                                 class="float-end text-muted text-unline-dashed ms-1"
                                             >Reset
                                                 password</a
