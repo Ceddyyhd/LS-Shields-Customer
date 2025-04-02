@@ -69,7 +69,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Welche Führerscheine haben sie?</label>
+                        <label>{{ $questions['application_question_driver_license'] ?? 'Welche Führerscheine haben sie?' }}</label>
                         <input type="text" name="position" class="form-control @error('position') is-invalid @enderror" required>
                         @error('position')
                             <div class="invalid-feedback">{{ $message }}</div>
@@ -77,7 +77,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Welche Berufserfahrung haben sie?</label>
+                        <label>{{ $questions['application_question_experience'] ?? 'Welche Berufserfahrung haben sie?' }}</label>
                         <textarea name="experience" class="form-control @error('experience') is-invalid @enderror" rows="4" required></textarea>
                         @error('experience')
                             <div class="invalid-feedback">{{ $message }}</div>
@@ -85,7 +85,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Was Motiviert sie?</label>
+                        <label>{{ $questions['application_question_motivation'] ?? 'Was Motiviert sie?'}}</label>
                         <textarea name="motivation" class="form-control @error('motivation') is-invalid @enderror" rows="4" required></textarea>
                         @error('motivation')
                             <div class="invalid-feedback">{{ $message }}</div>
