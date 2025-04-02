@@ -8,9 +8,19 @@ use Illuminate\Http\Request;
 class ApplicationController extends Controller
 {
     public function create()
-    {
-        return view('landingpage.application');
-    }
+{
+    // Fetch question settings from DB
+    $questions = DB::connection('mysql2')
+        ->table('system_settings')
+        ->whereIn('key', [
+            'application_question_question1',
+            'application_question_question2',
+            'application_question_question3'
+        ])
+        ->pluck('value', 'key');
+
+    return view('landingpage.application', compact('questions'));
+}
 
     public function store(Request $request)
     {

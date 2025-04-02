@@ -93,7 +93,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Wie sind sie auf LS-Shields aufmerksam geworden?</label>
+                        <label>{{ $questions['application_question_question1'] ?? 'Wie sind sie auf LS-Shields aufmerksam geworden?' }}</label>
                         <textarea name="question1" class="form-control @error('question1') is-invalid @enderror" rows="4" required></textarea>
                         @error('question1')
                             <div class="invalid-feedback">{{ $message }}</div>
@@ -101,7 +101,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Wieso genau LS-Shields und nicht ein anderes Unternehmen?</label>
+                        <label>{{ $questions['application_question_question2'] ?? 'Wieso genau LS-Shields und nicht ein anderes Unternehmen?' }}</label>
                         <textarea name="question2" class="form-control @error('question2') is-invalid @enderror" rows="4" required></textarea>
                         @error('question2')
                             <div class="invalid-feedback">{{ $message }}</div>
@@ -109,7 +109,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Was erwarten sie von uns?</label>
+                        <label>{{ $questions['application_question_question3'] ?? 'Was erwarten sie von uns?' }}</label>
                         <textarea name="question3" class="form-control @error('question3') is-invalid @enderror" rows="4" required></textarea>
                         @error('question3')
                             <div class="invalid-feedback">{{ $message }}</div>
