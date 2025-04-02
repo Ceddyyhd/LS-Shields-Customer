@@ -116,6 +116,40 @@
                         @enderror
                     </div>
 
+                    <div class="form-group">
+    <label>Führungszeugnis</label>
+    <div class="card">
+        <div class="card-body">
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="certificate_type" id="certificate_url_radio" value="url" checked>
+                <label class="form-check-label" for="certificate_url_radio">
+                    URL/Link zum Führungszeugnis
+                </label>
+            </div>
+            <div class="certificate-url-group">
+                <input type="url" name="certificate_url" class="form-control @error('certificate_url') is-invalid @enderror" placeholder="https://...">
+                @error('certificate_url')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
+            
+            <div class="form-check mt-3 mb-3">
+                <input class="form-check-input" type="radio" name="certificate_type" id="certificate_file_radio" value="file">
+                <label class="form-check-label" for="certificate_file_radio">
+                    Führungszeugnis als PDF hochladen
+                </label>
+            </div>
+            <div class="certificate-file-group" style="display: none;">
+                <input type="file" name="certificate_file" class="form-control @error('certificate_file') is-invalid @enderror" accept=".pdf">
+                <small class="form-text text-muted">Max. 10MB, nur PDF-Dateien erlaubt</small>
+                @error('certificate_file')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
+        </div>
+    </div>
+</div>
+
                     <div class="form-group text-center">
                         <button type="submit" class="btn btn-primary">Bewerbung absenden</button>
                     </div>
@@ -152,4 +186,26 @@ label {
     font-size: 16px;
 }
 </style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlRadio = document.getElementById('certificate_url_radio');
+        const fileRadio = document.getElementById('certificate_file_radio');
+        const urlGroup = document.querySelector('.certificate-url-group');
+        const fileGroup = document.querySelector('.certificate-file-group');
+        
+        urlRadio.addEventListener('change', function() {
+            if (this.checked) {
+                urlGroup.style.display = 'block';
+                fileGroup.style.display = 'none';
+            }
+        });
+        
+        fileRadio.addEventListener('change', function() {
+            if (this.checked) {
+                urlGroup.style.display = 'none';
+                fileGroup.style.display = 'block';
+            }
+        });
+    });
+</script>
 @endsection

@@ -21,6 +21,8 @@ class Application extends Model
         'question1',
         'question2',
         'question3',
+        'certificate_url',
+        'certificate_file',
         'status'
     ];
 }
