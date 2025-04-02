@@ -14,6 +14,9 @@ class ApplicationController extends Controller
     $questions = DB::connection('mysql2')
         ->table('system_settings')
         ->whereIn('key', [
+            'application_question_driver_license',
+            'application_question_experience',
+            'application_question_motivation',
             'application_question_question1',
             'application_question_question2',
             'application_question_question3'
