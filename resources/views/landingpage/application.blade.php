@@ -16,7 +16,7 @@
 
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <form action="{{ route('application.store') }}" method="POST" class="application-form">
+            <form action="{{ route('application.store') }}" method="POST" class="application-form" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
                         <div class="col-md-6 form-group">
